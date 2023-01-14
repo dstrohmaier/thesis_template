@@ -1,4 +1,5 @@
 # Basic Makefile for LaTeX projects by Markus Kuhn
+# Modified by David Strohmaier
 
 # requires GNU make
 SHELL=/bin/bash
@@ -7,16 +8,16 @@ SHELL=/bin/bash
 
 # Build rules for LaTeX-related files
 %.dvi: %.tex
-	(latex $<; makeindex $*; makeglossaries $*; bibtex $*; latex $<)
-	while grep 'Rerun to get ' $*.log ; do (makeindex $*; makeglossaries $*; bibtex $*; latex $<); done
+	(latex $<; makeindex $*; makeglossaries $*; biber $*; latex $<)
+	while grep 'Rerun to get ' $*.log ; do (makeindex $*; makeglossaries $*; biber $*; latex $<); done
 	-killall -USR1 -r xdvi || true
 
 %.ps: %.dvi
 	dvips -Ppdf -G0 $*.dvi
 
 %.pdf: %.tex
-	(pdflatex $<; makeindex $*; makeglossaries $*; bibtex $*; pdflatex $<)
-	while grep 'Rerun to get ' $*.log ; do (makeindex $*; makeglossaries $*; bibtex $*; pdflatex $<); done
+	(pdflatex $<; makeindex $*; makeglossaries $*; biber $*; pdflatex $<)
+	while grep 'Rerun to get ' $*.log ; do (makeindex $*; makeglossaries $*; biber $*; pdflatex $<); done
 
 # Examples of rules for converting various graphics formats into EPS or PDF
 # (so we can always clean intermediate EPS or PDF versions of figures)

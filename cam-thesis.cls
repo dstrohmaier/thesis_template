@@ -2,11 +2,12 @@
 %%
 %% Class ``cam-thesis''
 %%
-%% Version: v0.2
-%% Authors: Jean Martina, Rok Strnisa, Matej Urbas
-%% Date: 30/07/2008
+%% Version: v0.2.mod
+%% Authors: Jean Martina, Rok Strnisa, Matej Urbas, David Strohmaier
+%% Date: 14/01/2023
 %%
 %% Copyright (c) 2008-2012, Rok Strniša, Jean Martina, Matej Urbas
+%% Copyright (c) 2023-, David Strohmaier
 %% License: Simplified BSD License
 %% License file: ./License
 %% Original License URL: http://www.freebsd.org/copyright/freebsd-license.html
@@ -28,7 +29,7 @@
 %%
 %%%%%
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cam-thesis}[2012/04/12 University of Cambridge thesis class]
+\ProvidesClass{cam-thesis}[2026/12/31 University of Cambridge thesis class]
 
 \typeout{}
 \typeout{***********************************************}
@@ -121,7 +122,7 @@
 \RequirePackage{graphicx}           % Required for the UC Logo (on the title page)
 \RequirePackage{calc}               % Used for calculating margins and laying out the title page
 \RequirePackage{setspace}      	    % Used for selecting single or onehalf line spacing.
-\RequirePackage{microtype}          % Improvement of general text appearance 
+\RequirePackage{microtype}          % Improvement of general text appearance
 
 % Hyperref should be included in any case, but we make it non-obtrusive (i.e.: no hyperlink borders).
 % Why do we need a separate treatment of hyperref for the techreport? Because the guidelines say so. :)
@@ -301,7 +302,7 @@
 \newcommand{\@submissionnotice}{%
 \ifcam@firstyr
 First year report submitted
-\else 
+\else
 \ifcam@secondyr
 Second year report submitted
 \else
@@ -472,7 +473,7 @@ for the degree of Doctor of Philosophy%
 \else
 {\ifcam@firstyr
 % First and second yr report don't need the declaration
-\else 
+\else
 \ifcam@secondyr
 %
 \else
@@ -537,7 +538,7 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
 
 \ifcam@firstyr
 % First and second yr report don't need the acknowledgements
-\else 
+\else
 {\ifcam@secondyr
 %
 \else

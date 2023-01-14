@@ -2,11 +2,12 @@
 %%
 %% Sample document ``thesis.tex''
 %%
-%% Version: v0.2
-%% Authors: Jean Martina, Rok Strnisa, Matej Urbas
-%% Date: 30/07/2008
+%% Version: v0.2.mode
+%% Authors: Jean Martina, Rok Strnisa, Matej Urbas, David Strohmaier
+%% Date: 14/01/2023
 %%
-%% Copyright (c) 2008-2011, Rok Strniša, Jean Martina, Matej Urbas
+%% Copyright (c) 2008-2011, Rok Strniša, Jean Martina, Matej Urbas (template)
+%% Copyright (c) 2023-, David Strohmaier (adaptation of template and content)
 %% License: Simplified BSD License
 %% License file: ./License
 %% Original License URL: http://www.freebsd.org/copyright/freebsd-license.html
@@ -25,8 +26,15 @@
 % For more info see `README.md`
 \documentclass[withindex,glossary]{cam-thesis}
 
-% Citations using numbers
-\usepackage[numbers]{natbib}
+% Citations using biblatex/apa style
+\usepackage[
+backend=biber,
+style=apa,
+citestyle=apa,
+natbib
+]{biblatex}
+\addbibresource{thesis.bib}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Thesis meta-information
@@ -37,51 +45,19 @@
 spanning two lines}
 
 %% The full name of the author (e.g.: James Smith):
-\author{My Full Name}
+\author{David Strohmaier}
 
 %% College affiliation:
-\college{My College}
+\college{Darwin College}
 
 %% College shield [optional]:
-% \collegeshield{CollegeShields/Christs}
-% \collegeshield{CollegeShields/Churchill}
-% \collegeshield{CollegeShields/Clare}
-% \collegeshield{CollegeShields/ClareHall}
-% \collegeshield{CollegeShields/CorpusChristi}
-% \collegeshield{CollegeShields/Darwin}
-% \collegeshield{CollegeShields/Downing}
-% \collegeshield{CollegeShields/Emmanuel}
-% \collegeshield{CollegeShields/Fitzwilliam}
-% \collegeshield{CollegeShields/Girton}
-% \collegeshield{CollegeShields/GonCaius}
-% \collegeshield{CollegeShields/Homerton}
-% \collegeshield{CollegeShields/HughesHall}
-% \collegeshield{CollegeShields/Jesus}
-% \collegeshield{CollegeShields/Kings}
-% \collegeshield{CollegeShields/LucyCavendish}
-% \collegeshield{CollegeShields/Magdalene}
-% \collegeshield{CollegeShields/MurrayEdwards}
-% \collegeshield{CollegeShields/Newnham}
-% \collegeshield{CollegeShields/Pembroke}
-% \collegeshield{CollegeShields/Peterhouse}
-% \collegeshield{CollegeShields/Queens}
-% \collegeshield{CollegeShields/Robinson}
-% \collegeshield{CollegeShields/Selwyn}
-% \collegeshield{CollegeShields/SidneySussex}
-% \collegeshield{CollegeShields/StCatharines}
-% \collegeshield{CollegeShields/StEdmunds}
-% \collegeshield{CollegeShields/StJohns}
-% \collegeshield{CollegeShields/Trinity}
-% \collegeshield{CollegeShields/TrinityHall}
-% \collegeshield{CollegeShields/Wolfson}
-% \collegeshield{CollegeShields/CUniNoText}
-\collegeshield{CollegeShields/FitzwilliamRed}
+\collegeshield{CollegeShields/Darwin}
 
 %% Submission date [optional]:
 % \submissiondate{November, 2042}
 
 %% You can redefine the submission notice [optional]:
-% \submissionnotice{A badass thesis submitted on time for the Degree of PhD}
+% \submissionnotice{For the Sake of Epistemic Progress}
 
 %% Declaration date:
 \date{My Month, My Year}
@@ -146,7 +122,7 @@ find more about classes at \url{http://www.ctan.org/pkg/clsguide}.}.
 There are some handy options for citing publications. It is possible to print just the year of some publication:~\citeyear{example}. It is also possible to print the name of the author(s) in the form ``Author et al.'': \citeauthor{example}. Finally, there is also a command to print the full list of authors of a publication: \citet*{example}.
 
 This is an example glossary reference: \GLS{HOL}. \\
- 
+
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
