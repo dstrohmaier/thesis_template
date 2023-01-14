@@ -7,4 +7,4 @@
 
 ## Modification
 
-This version has been modified by David Strohmaier for personal use. Please use [the original]((https://github.com/cambridge/thesis).
+This version has been modified by David Strohmaier for personal use. Please use [the original](https://github.com/cambridge/thesis).
