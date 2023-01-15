@@ -587,6 +587,9 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
   backrefpage = {page},% originally "cited on page"
   backrefpages = {pages},% originally "cited on pages"
 }
+\renewcommand{\bibpreamble}{%
+  [Citing pages are listed after each reference.]%
+  \par\bigskip}
 \else
   \RequirePackage[
   hyperref=true,
