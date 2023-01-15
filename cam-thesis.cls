@@ -123,6 +123,7 @@
 \RequirePackage{calc}               % Used for calculating margins and laying out the title page
 \RequirePackage{setspace}      	    % Used for selecting single or onehalf line spacing.
 \RequirePackage{microtype}          % Improvement of general text appearance
+\RequirePackage{hyperref}           % For links and references
 
 % Hyperref should be included in any case, but we make it non-obtrusive (i.e.: no hyperlink borders).
 % Why do we need a separate treatment of hyperref for the techreport? Because the guidelines say so. :)
@@ -581,7 +582,6 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
   style=apa,
   citestyle=apa,
   natbib]{biblatex}
-  \RequirePackage{hyperref}
 
 \DefineBibliographyStrings{english}{%
   backrefpage = {page},% originally "cited on page"
