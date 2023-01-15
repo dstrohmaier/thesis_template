@@ -570,12 +570,24 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
-%% Backrefs
+%% Backrefs and Citations using biblatex/apa style
+
 %%
 %%%%%
 
 \ifcam@backrefs
-\RequirePackage[hyperpageref]{backref}
+  \RequirePackage[backref=true,
+  backend=biber,
+  style=apa,
+  citestyle=apa,
+  natbib]{biblatex}
+  \RequirePackage{hyperref}
+
+\DefineBibliographyStrings{english}{%
+  backrefpage = {page},% originally "cited on page"
+  backrefpages = {pages},% originally "cited on pages"
+}
+
 \renewcommand*{\backref}[1]{}
 \renewcommand*{\backrefalt}[4]{%
 	\ifcase #1 %
@@ -584,7 +596,14 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
 	\else
 	{\footnotesize Cited on pages #2.}%
 	\fi
-}
+      }
+
+\else
+  \RequirePackage[
+  backend=biber,
+  style=apa,
+  citestyle=apa,
+  natbib]{biblatex}
 \fi
 
 %%%%% EOF: cam-thesis.cls
