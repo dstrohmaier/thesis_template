@@ -16,4 +16,5 @@ thesis.synctex.gz
 
 /build/
 /.idea/
-/auto/
+**/auto/
+
