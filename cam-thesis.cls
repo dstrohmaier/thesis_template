@@ -576,7 +576,9 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
 %%%%%
 
 \ifcam@backrefs%
-  \RequirePackage[backref=true,
+  \RequirePackage[
+  hyperref=true,
+  backref=true,
   backend=biber,
   style=apa,
   citestyle=apa,
@@ -587,6 +589,7 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
 }
 \else
   \RequirePackage[
+  hyperref=true,
   backend=biber,
   style=apa,
   citestyle=apa,
