@@ -579,20 +579,12 @@ This dissertation does not exceed the prescribed limit of 60\,000 words.
   \RequirePackage[backref=true,
   backend=biber,
   style=apa,
-  citestyle=apa]{biblatex}
+  citestyle=apa,
+  natbib]{biblatex}
 \DefineBibliographyStrings{english}{%
   backrefpage = {page},% originally "cited on page"
   backrefpages = {pages},% originally "cited on pages"
 }
-\renewcommand*{\backref}[1]{}
-\renewcommand*{\backrefalt}[4]{%
-	\ifcase #1 %
-	\or
-	{\footnotesize Cited on page #2.}%
-	\else
-	{\footnotesize Cited on pages #2.}%
-	\fi
-      }
 \else
   \RequirePackage[
   backend=biber,
