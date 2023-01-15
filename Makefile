@@ -52,7 +52,7 @@ PNMTOPS=pnmtops -rle -noturn -nosetpage
 all: thesis.pdf   # or thesis.ps
 
 clean:
-	rm -f *~ *.dvi *.log *.bak *.aux *.toc *.ps *.eps *.blg *.bbl
+	rm -f *~ *.dvi *.log *.bak *.aux *.toc *.ps *.eps *.blg *.bbl *.bcf *.run.xml
 	rm -f *.glg *.glo *.gls *.idx *.ild *.ind *.ist *.ilg *.iso *.out
 	rm -f *.pstex *.pstex_t
 	rm -f thesis.pdf
